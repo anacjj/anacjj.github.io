@@ -523,7 +523,7 @@ async function getStates(file) {
 getStates('states.html');
 
 
-//local storage 
+//local storage js code functions
 
 //when page loads, check for returning user and load their data
 var firstName = getCookie("firstName");
