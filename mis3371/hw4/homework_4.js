@@ -496,4 +496,28 @@ if (firstName !== "") {
     });
 }
 
+// fetch api for the states dropdown function
+
+// display states in dropdown
+function displayStates(statesHTML) {
+    var stateDropdown = document.getElementById('state');
+    stateDropdown.innerHTML += statesHTML;
+    console.log('States loaded successfully!');
+}
+
+// fetch states from external file
+async function getStates(file) {
+    try {
+        let myObject = await fetch(file);
+        if (!myObject.ok) {
+            throw new Error('Failed to load states');
+        }
+        let myText = await myObject.text();
+        displayStates(myText);
+    } catch (error) {
+        console.error('Error loading states:', error);
+        alert('Could not load states. Please refresh the page.');
+    }
+}
+
 
