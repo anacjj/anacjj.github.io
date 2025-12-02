@@ -458,7 +458,7 @@ function getCookie(name) {
     return ""; // only works with: space?? - correct answer: no space
 }
 
-// declaring what values are being saved in cookies 
+//declaring what values are being saved in cookies 
 var inputs = [
     {id: "firstname", cookieName: "firstName"},
 ]
@@ -496,16 +496,16 @@ if (firstName !== "") {
     });
 }
 
-// fetch api for the states dropdown function
+//fetch api for the states dropdown function
 
-// display states in dropdown
+//display states in dropdown
 function displayStates(statesHTML) {
     var stateDropdown = document.getElementById('state');
     stateDropdown.innerHTML += statesHTML;
     console.log('States loaded successfully!');
 }
 
-// fetch states from external file (states.html)
+//fetch states from external file (states.html)
 async function getStates(file) {
     try {
         let myObject = await fetch(file);
@@ -523,9 +523,9 @@ async function getStates(file) {
 getStates('states.html');
 
 
-// local storage
+//local storage 
 
-// When page loads, check for returning user and load their data
+//when page loads, check for returning user and load their data
 var firstName = getCookie("firstName");
 
 if (firstName !== "") {
@@ -561,7 +561,7 @@ if (firstName !== "") {
     }
 }
 
-// save to localStorage when leaving fields after checking Remember me
+//save to localStorage when leaving fields after checking Remember me
 document.getElementById("email").addEventListener("blur", function() {
     var rememberMe = document.getElementById("remember-me");
     if (rememberMe.checked) {
