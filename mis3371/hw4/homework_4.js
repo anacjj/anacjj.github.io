@@ -461,6 +461,8 @@ function getCookie(name) {
 //declaring what values are being saved in cookies 
 var inputs = [
     {id: "firstname", cookieName: "firstName"},
+    {id: "middleinit", cookieName: "middleInitial"},
+    {id: "lastname", cookieName: "lastName"},
 ]
 
 //automatically populate saved cookie values in field and updates cookies if any changes 
@@ -529,36 +531,27 @@ getStates('states.html');
 var firstName = getCookie("firstName");
 
 if (firstName !== "") {
+    // Automatically load localStorage data
+    var email = localStorage.getItem("email");
+    if (email) document.getElementById("email").value = email;
     
-    var confirmUser = confirm("Welcome back, " + firstName + "! Is this you?");
+    var phone = localStorage.getItem("phone");
+    if (phone) document.getElementById("phone").value = phone;
     
-    if (confirmUser) {
-        
-        //localStorage data
-        var email = localStorage.getItem("email");
-        if (email) document.getElementById("email").value = email;
-        
-        var phone = localStorage.getItem("phone");
-        if (phone) document.getElementById("phone").value = phone;
-        
-        var address1 = localStorage.getItem("address1");
-        if (address1) document.getElementById("address1").value = address1;
-        
-        var address2 = localStorage.getItem("address2");
-        if (address2) document.getElementById("address2").value = address2;
-        
-        var city = localStorage.getItem("city");
-        if (city) document.getElementById("city").value = city;
-        
-        var state = localStorage.getItem("state");
-        if (state) document.getElementById("state").value = state;
-        
-        var zip = localStorage.getItem("zip");
-        if (zip) document.getElementById("zip").value = zip;
-    } else {
-        //clear everything if not the user
-        localStorage.clear();
-    }
+    var address1 = localStorage.getItem("address1");
+    if (address1) document.getElementById("address1").value = address1;
+    
+    var address2 = localStorage.getItem("address2");
+    if (address2) document.getElementById("address2").value = address2;
+    
+    var city = localStorage.getItem("city");
+    if (city) document.getElementById("city").value = city;
+    
+    var state = localStorage.getItem("state");
+    if (state) document.getElementById("state").value = state;
+    
+    var zip = localStorage.getItem("zip");
+    if (zip) document.getElementById("zip").value = zip;
 }
 
 //save to localStorage when leaving fields after checking Remember me
