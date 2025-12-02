@@ -523,3 +523,98 @@ async function getStates(file) {
 getStates('states.html');
 
 
+// local storage
+
+// When page loads, check for returning user and load their data
+var firstName = getCookie("firstName");
+
+if (firstName !== "") {
+    
+    var confirmUser = confirm("Welcome back, " + firstName + "! Is this you?");
+    
+    if (confirmUser) {
+        
+        //localStorage data
+        var email = localStorage.getItem("email");
+        if (email) document.getElementById("email").value = email;
+        
+        var phone = localStorage.getItem("phone");
+        if (phone) document.getElementById("phone").value = phone;
+        
+        var address1 = localStorage.getItem("address1");
+        if (address1) document.getElementById("address1").value = address1;
+        
+        var address2 = localStorage.getItem("address2");
+        if (address2) document.getElementById("address2").value = address2;
+        
+        var city = localStorage.getItem("city");
+        if (city) document.getElementById("city").value = city;
+        
+        var state = localStorage.getItem("state");
+        if (state) document.getElementById("state").value = state;
+        
+        var zip = localStorage.getItem("zip");
+        if (zip) document.getElementById("zip").value = zip;
+    } else {
+        //clear everything if not the user
+        localStorage.clear();
+    }
+}
+
+// save to localStorage when leaving fields after checking Remember me
+document.getElementById("email").addEventListener("blur", function() {
+    var rememberMe = document.getElementById("remember-me");
+    if (rememberMe.checked) {
+        localStorage.setItem("email", this.value);
+    }
+});
+
+document.getElementById("phone").addEventListener("blur", function() {
+    var rememberMe = document.getElementById("remember-me");
+    if (rememberMe.checked) {
+        localStorage.setItem("phone", this.value);
+    }
+});
+
+document.getElementById("address1").addEventListener("blur", function() {
+    var rememberMe = document.getElementById("remember-me");
+    if (rememberMe.checked) {
+        localStorage.setItem("address1", this.value);
+    }
+});
+
+document.getElementById("address2").addEventListener("blur", function() {
+    var rememberMe = document.getElementById("remember-me");
+    if (rememberMe.checked) {
+        localStorage.setItem("address2", this.value);
+    }
+});
+
+document.getElementById("city").addEventListener("blur", function() {
+    var rememberMe = document.getElementById("remember-me");
+    if (rememberMe.checked) {
+        localStorage.setItem("city", this.value);
+    }
+});
+
+document.getElementById("state").addEventListener("blur", function() {
+    var rememberMe = document.getElementById("remember-me");
+    if (rememberMe.checked) {
+        localStorage.setItem("state", this.value);
+    }
+});
+
+document.getElementById("zip").addEventListener("blur", function() {
+    var rememberMe = document.getElementById("remember-me");
+    if (rememberMe.checked) {
+        localStorage.setItem("zip", this.value);
+    }
+});
+
+// When Remember Me is unchecked, clear localStorage
+document.getElementById("remember-me").addEventListener("change", function() {
+    if (!this.checked) {
+        localStorage.clear();
+        console.log("localStorage cleared");
+    }
+});
