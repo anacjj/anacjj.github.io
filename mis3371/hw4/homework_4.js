@@ -505,7 +505,7 @@ function displayStates(statesHTML) {
     console.log('States loaded successfully!');
 }
 
-// fetch states from external file
+// fetch states from external file (states.html)
 async function getStates(file) {
     try {
         let myObject = await fetch(file);
@@ -519,5 +519,7 @@ async function getStates(file) {
         alert('Could not load states. Please refresh the page.');
     }
 }
+//calling the function
+getStates('states.html');
 
 
