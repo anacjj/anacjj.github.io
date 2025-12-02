@@ -461,8 +461,6 @@ function getCookie(name) {
 //declaring what values are being saved in cookies 
 var inputs = [
     {id: "firstname", cookieName: "firstName"},
-    {id: "middleinit", cookieName: "middleInitial"},
-    {id: "lastname", cookieName: "lastName"},
 ]
 
 //automatically populate saved cookie values in field and updates cookies if any changes 
@@ -532,6 +530,12 @@ var firstName = getCookie("firstName");
 
 if (firstName !== "") {
     // Automatically load localStorage data
+    var middleinit = localStorage.getItem("middleinit");
+    if (middleinit) document.getElementById("middleinit").value = middleinit;
+
+    var lastname = localStorage.getItem("lastname");
+    if (lastname) document.getElementById("lastname").value = lastname;
+
     var email = localStorage.getItem("email");
     if (email) document.getElementById("email").value = email;
     
@@ -555,6 +559,20 @@ if (firstName !== "") {
 }
 
 //save to localStorage when leaving fields after checking Remember me
+document.getElementById("middleinit").addEventListener("blur", function() {
+    var rememberMe = document.getElementById("remember-me");
+    if (rememberMe.checked) {
+        localStorage.setItem("middleinit", this.value);
+    }
+});
+
+document.getElementById("lastname").addEventListener("blur", function() {
+    var rememberMe = document.getElementById("remember-me");
+    if (rememberMe.checked) {
+        localStorage.setItem("lastname", this.value);
+    }
+});
+
 document.getElementById("email").addEventListener("blur", function() {
     var rememberMe = document.getElementById("remember-me");
     if (rememberMe.checked) {
