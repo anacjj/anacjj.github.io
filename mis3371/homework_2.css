@@ -1,0 +1,237 @@
+ /* 
+ Name: Ana Jara
+ File: homework_2.css
+ Date Created: 9/20/2025
+ Date Updated: 10/26/2025
+ Purpose: MIS 3371 Homework 2 - Style sheet using CSS for patient form
+ */
+        
+#header {
+    background: rgba(243, 230, 207, 0.8);;
+    border: 3px solid #333;
+    width: 100%;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(239, 216, 244);
+    margin: 0 auto;
+    height: 100%;
+    min-height: 100vh;
+    font-family: "Lucida Console", monospace;
+    width: 85%;
+    max-width: 1100px;
+    min-width: 1000px;
+    padding: 20px;
+
+}
+
+main { /*in the thank you html page */
+    text-align: center;
+    font-family: "Lucida Console", monospace;
+    font-weight: normal;
+    flex-grow: 1;
+}
+
+ h1 {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: bold;
+    color: rgb(14, 14, 14);
+    flex-grow: 1;
+}
+
+ h2 {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: normal;
+    color: rgb(0, 0, 0);
+    flex-grow: 1;
+}
+
+.image {
+    text-align: left;
+    border: 2px solid #333;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.image-footer {
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.image-footer img {
+    width: 80px;
+    height: auto;
+    border: 2px solid #333;
+    border-radius: 4px;
+}
+
+table.form, tr.form, .td.form {
+  width: 70%;
+  opacity: 0.9;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:rgb(180, 219, 254);
+  padding: 0px;
+  margin: 0 auto;
+  border-spacing: 00px;
+  color:rgb(2, 54, 58);
+}
+th.form {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:rgb(255, 255, 228);
+  padding: 20px;
+  border-spacing: 20px;
+  color:rgb(1, 9, 55);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+textarea {
+text-align: left;
+font-family: Georgia, 'Times New Roman', serif;
+color: rgb(14, 14, 14);
+flex-grow: 1;
+}
+
+.footer {
+position: flex;
+}
+
+#today {
+font-family: Georgia, 'Times New Roman', serif;
+color: rgb(14, 14, 14);
+flex-grow: 1;
+}
+
+p {
+font-family: Georgia, 'Times New Roman', serif;
+color: rgb(9, 9, 9);
+flex-grow: 1; 
+}
+
+.footer-header {
+background:rgb(255, 205, 201);
+border: 3px solid #8b0000;
+padding: 20px;
+display: flex;
+align-items: left;
+justify-content: space-between;
+max-width: 900px;
+margin: 0 auto;
+height: 5.0rem
+}
+
+.footer-title h2{
+font-size: 18px;
+font-family: Georgia, 'Times New Roman', serif;
+color: #333;
+font-weight: bold;
+line-height: 1.2;
+align-items: center;
+padding-left: 8px;
+margin: 5px 0;
+}
+
+.footer-locations h5{
+margin: 5px 0;
+font-size: 15px;
+font-family: Georgia, 'Times New Roman', serif;
+color: #333;
+font-weight: bold;
+line-height: 1;
+align-items: center;
+padding-left: 10%;
+vertical-align: middle;
+}
+
+.footer-locations p{
+margin: 5px 0;
+font-size: 14px;
+font-family: Georgia, 'Times New Roman', serif;
+color: #333;
+line-height: 1;
+padding-left: 10%;
+padding-right: 5%;
+}
+
+.footer-links h5{
+margin: 5px 0;
+font-size: 15px;
+font-family: Georgia, 'Times New Roman', serif;
+color: #333;
+font-weight: bold;
+line-height: 1;
+align-items: left;
+padding-left: 0%;
+vertical-align: middle;
+}
+
+.footer-links p {
+margin: 5px 0;
+align-items: center;
+font-size: 14px;
+font-family: Georgia, 'Times New Roman', serif;
+color: #333;
+line-height: 1.5;
+padding-left: 10%;
+padding-right: 5%;
+}
+
+.textsize1 
+{
+    width:10px
+}
+.textsize5 
+{
+    width:40px
+}
+
+.error {
+    color: red;
+    display: block;
+    font-size: 12px;
+    margin-top: 3px;
+    font-family: "Lucida Console", monospace;
+    font-weight: normal;
+}
+
+.password-message {
+    text-align: right;
+    font-family: "Lucida Console", monospace;
+    font-weight: normal;
+    position: relative;
+    left: 100px;
+    background: transparent;
+    color: red;
+    padding: 10px;
+    border-spacing: 2px;
+    border-radius: 20px;
+}
+
+#review {
+    margin-top: 5px;
+}
+
+table.output,
+tr.output,
+td.output {
+    width: 500px;
+    background-color: rgb(202, 250, 236);
+    padding: 10px;
+    border-spacing: 2px;
+    border-radius: 20px;
+    color: firebrick;
+}
+
+td.output {
+    width: 500px;
+    background-color:rgb(249, 238, 177);
+    padding: 10px;
+    border-spacing: 2px;
+}
