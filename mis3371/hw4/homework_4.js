@@ -2,8 +2,8 @@
 Author: Ana Jara
 File: homework_4.js
 Date created: 9/15/2025
-Date last edited: 12//2025
-Description: MIS 3371 Homework 4 - Allowing JavaScript functions for the patient form. 
+Date last edited: 12/3/2025
+Description: MIS 3371 Homework 4 - Allowing JavaScript functions for the patient form.
 */
 
 //dynamic date js code
